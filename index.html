@@ -4,35 +4,40 @@
     <meta charset="UTF-8">
     <link href="index.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- jQuery Library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <title>Hey Joy!</title>
 </head>
 <body>
-    <div class= "envelope-wrapper">
-        <div id="envelope" class="close">
-            <div class="front flap"></div>
-            <div class="front pocket"></div>
-            <div class = "letter">
-                <p class="words line1">Hi mahal ko,</p>
-                <p class="words line2">I've been meaning to ask you this for a while</p>
-                <p class="words line3">Will you be my valentine?</p>
+    <div class="envelope-wrapper">
+        <!-- Wrap the envelope in an anchor tag -->
+        <a href="yespage.html" class="envelope-link">
+            <div id="envelope" class="close">
+                <div class="front flap"></div>
+                <div class="front pocket"></div>
+                <div class="letter">
+                    <p class="words line1">Hi mahal ko,</p>
+                    <p class="words line2">I've been meaning to ask you this for a while</p>
+                    <p class="words line3">Will you be my valentine?</p>
+                </div>
+                <div class="hearts">
+                    <div class="heart a1"></div>
+                    <div class="heart a2"></div>
+                    <div class="heart a3"></div>
+                </div>
             </div>
-            <div class="hearts">
-                <div class="heart a1"></div>
-                <div class="heart a2"></div>
-                <div class="heart a3"></div>
-            </div>
-        </div>
+        </a>
     </div>
+    
+    <!-- Control Buttons -->
     <div class="reset">
         <button id="open">Open</button>
         <button id="reset">Reset</button>
-        <div class="response-buttons">
-            <a href="yespage.html" class="button">Yes</a>
-            <button id="no" class="button">No</button>
-        </div>
-        </div>
+    </div>
+    
+    <!-- Valentine Message -->
     <h2 class="valentine">Happy Valentine's Day!</h2>
 </body>
+<!-- Link to JavaScript File -->
 <script src="index.js"></script>
 </html>
