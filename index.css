@@ -237,3 +237,35 @@ body {
     font-size: 50px;
     margin: 150px;
 }
+
+.button {
+    font-weight: 800;
+    font-style: normal;
+    transition: all 0.1s linear;
+    background-color: transparent;
+    border: solid 2px #FF6863;
+    border-radius: 4px;
+    color: #FF6863;
+    display: inline-block;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin: 20px;
+    padding: 10px 20px;
+    line-height: 2em;
+    text-decoration: none;
+    min-width: 150px;
+    cursor: pointer;
+    outline: none;
+    position: relative; /* Default position */
+}
+
+/* Hover Effects */
+.button:hover {
+    background-color: #FF6863;
+    color: #f5d6f0;
+}
+
+#no.button {
+    position: fixed; /* Allows the button to move freely within the viewport */
+    z-index: 1000; /* Ensures it stays on top of other elements */
+}
