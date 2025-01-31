@@ -3,25 +3,36 @@ $(document).ready(function () {
     var btn_open = $("#open");
     var btn_reset = $("#reset");
     var btn_no = $("#no"); // Select the "No" button
+    var responseButtons = $(".response-buttons"); // Select the response buttons container
 
+    // Envelope Click Handlers
     envelope.click(function(){
-        open();
+        openEnvelope();
     });
     btn_open.click(function(){
-        open();
+        openEnvelope();
     });
     btn_reset.click(function(){
-        close();
+        closeEnvelope();
     });
 
-    function open() {
+    function openEnvelope() {
         envelope.addClass("open").removeClass("close");
+        
+        // After 2 seconds, show the response buttons
+        setTimeout(function(){
+            $(".response-buttons").addClass("visible");
+        }, 2000); // 2000 milliseconds = 2 seconds
     }
 
-    function close() {
+    function closeEnvelope() {
         envelope.addClass("close").removeClass("open");
+        
+        // Hide the response buttons when closing the envelope
+        $(".response-buttons").removeClass("visible");
     }
 
+    // "No" Button Jumping Behavior
     btn_no.click(function(event){
         event.preventDefault(); // Prevent any default button behavior
 
@@ -47,4 +58,4 @@ $(document).ready(function () {
             top: newTop
         }, 500); // 500ms animation duration
     });
-}) 
+});

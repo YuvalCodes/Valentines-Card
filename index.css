@@ -199,9 +199,12 @@ body {
     }
 }
 
-.reset{
-    text-align: center;
-
+.reset {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center;    /* Center items horizontally */
+    gap: 20px;              /* Space between elements */
+    margin-top: 20px;
 }
 
 .reset button {
@@ -268,4 +271,19 @@ body {
 #no.button {
     position: fixed; /* Allows the button to move freely within the viewport */
     z-index: 1000; /* Ensures it stays on top of other elements */
+}
+
+.response-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Space between Yes and No buttons */
+    opacity: 0; /* Initially hidden */
+    visibility: hidden; /* Prevents interaction when hidden */
+    transition: opacity 0.5s ease, visibility 0.5s ease; /* Smooth transition */
+}
+
+.response-buttons.visible {
+    opacity: 1;
+    visibility: visible;
 }
