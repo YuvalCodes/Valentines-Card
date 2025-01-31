@@ -48,15 +48,15 @@
   }
   .gallery > img:nth-child(6) {
     animation-delay: calc(-0.5*var(--d));
-    --r: -8deg;
+    --r: -10deg;
   }
   .gallery > img:nth-child(7) {
     animation-delay: calc(-0.6*var(--d));
-    --r: -8deg;
+    --r: -15deg;
   }
   .gallery > img:nth-child(8) {
     animation-delay: calc(-0.7*var(--d));
-    --r: -8deg;
+    --r: -23deg;
   }
   
   
